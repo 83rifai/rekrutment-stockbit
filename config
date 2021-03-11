@@ -1,0 +1,12 @@
+export APP_ENV=staging
+export DEBUG=true
+export PORT=8080
+export DB_HOST_MYSQL=localhost
+export DB_PORT_MYSQL=3306
+export DB_USER_MYSQL=stockbit
+export DB_PASSWORD_MYSQL=stockbit
+export DB_NAME_MYSQL=stockbit
+export DB_MAX_IDLE_CONN=10
+export DB_MAX_OPEN_CONN=100
+
+
