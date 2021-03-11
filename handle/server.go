@@ -31,6 +31,7 @@ func (s *Service) HTTPServerMain() *echo.Echo {
 	// external endpoints
 	api := e.Group("/api")
 	s.AnagramHandle.MountAdmin(api)
+	s.ImdbHandle.MountAdmin(api)
 
 	return e
 }

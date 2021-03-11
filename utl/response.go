@@ -5,4 +5,5 @@ type Response struct {
 	Message    interface{} `json:"message"`
 	Error      error       `json:"error,omitempty"`
 	Data       interface{} `json:"data"`
+	Param      interface{} `json:"interface,omitempty"`
 }

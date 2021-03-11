@@ -5,10 +5,12 @@ import (
 	"stockbit/cnf/databases"
 	"stockbit/cnf/env"
 	HandleAnagram "stockbit/module/anagram/presenter"
+	HandleImdb "stockbit/module/imdb/presenter"
 )
 
 type Service struct {
 	AnagramHandle *HandleAnagram.HTTPAnagramHandler
+	ImdbHandle    *HandleImdb.HTTPImdbHandler
 }
 
 func MakeHandler() *Service {
@@ -25,8 +27,10 @@ func MakeHandler() *Service {
 	}
 
 	anagramHandle := HandleAnagram.NewHTTPHandler(configuration)
+	imdbHandle := HandleImdb.NewHTTPHandler(configuration)
 
 	return &Service{
 		AnagramHandle: anagramHandle,
+		ImdbHandle:    imdbHandle,
 	}
 }
