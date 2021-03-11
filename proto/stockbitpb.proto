@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package stockbit;
+option go_package="stockbitpb";
+
+service ImdbService {
+    rpc Movies (RequestBody) returns (ResponseBody) {}
+    rpc Movie (RequestBody) returns (ResponseBody) {}
+}
+message RequestBody {
+    bytes Body = 1;
+}
+message ResponseBody {
+    bytes Body = 1;
+}
